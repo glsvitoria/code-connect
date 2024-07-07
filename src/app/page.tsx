@@ -82,6 +82,8 @@ export default async function Home({ searchParams }: HomeProps) {
 		search,
 	})
 
+	console.log(posts)
+
 	return (
 		<main className={styles.grid}>
 			{!posts ? (
