@@ -10,7 +10,7 @@
 		"api": "json-server posts.json -p 3042"
 	},
 	"prisma": {
-		"seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+		"seed": "node prisma/seed.ts"
 	},
 	"dependencies": {
 		"@prisma/client": "^5.16.1",
