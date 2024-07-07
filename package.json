@@ -1,22 +1,32 @@
 {
-  "name": "code-connect",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.4"
-  },
-  "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18"
-  }
+	"name": "code-connect",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "prisma generate && prisma migrate dev && prisma db seed && next build",
+		"start": "next start",
+		"lint": "next lint",
+		"api": "json-server posts.json -p 3042"
+	},
+	"prisma": {
+		"seed": "ts-node --compiler-options {\"module\":\"CommonJS\"} prisma/seed.ts"
+	},
+	"dependencies": {
+		"@prisma/client": "^5.16.1",
+		"next": "14.2.4",
+		"prisma": "^5.16.1",
+		"react": "^18",
+		"react-dom": "^18",
+		"remark": "^15.0.1",
+		"remark-html": "^16.0.1",
+		"ts-node": "^10.9.2",
+		"winston": "^3.13.0"
+	},
+	"devDependencies": {
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"typescript": "^5"
+	}
 }
