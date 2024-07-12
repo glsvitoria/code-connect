@@ -1,8 +1,8 @@
 type ChatProps = {
-  color?: string
-}
+  color?: string;
+};
 
-export const Chat = ({ color = '#888888' }: ChatProps) => {
+export const Chat = ({ color = "#888888" }: ChatProps) => {
   return (
     <svg
       width="20"
@@ -16,5 +16,5 @@ export const Chat = ({ color = '#888888' }: ChatProps) => {
         fill={color}
       />
     </svg>
-  )
-}
+  );
+};
